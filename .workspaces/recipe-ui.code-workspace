@@ -1,0 +1,33 @@
+{
+  "folders": [
+    {
+      "name": "recipe-ui",
+      "path": "../apps/recipe-ui"
+    },
+    {
+      "name": "@libs/shared-ui",
+      "path": "../libs/shared/ui"
+    },
+    {
+      "name": "__root__",
+      "path": "../"
+    },
+    {
+      "name": "** Switch Workspace",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/.git": true,
+      "**/.svn": true,
+      "**/.hg": true,
+      "**/CVS": true,
+      "**/.DS_Store": true,
+      "**/Thumbs.db": true,
+      "apps/*": true,
+      "dist/*": true,
+      "libs/shared/*ui": true
+    }
+  }
+}
