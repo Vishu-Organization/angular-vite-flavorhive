@@ -15,23 +15,20 @@
   status = 200
 
 [[headers]]
-  # Ensure proper MIME types for JavaScript files
-  for = "/*.js"
+  # Set headers for JavaScript and CSS files
+  for = "/*"
   [headers.values]
     Content-Type = "application/javascript"
-
-  # Ensure proper MIME types for CSS files
-  for = "/*.css"
-  [headers.values]
     Content-Type = "text/css"
 
 [[headers]]
-  # Cache static assets for performance
+  # Cache static assets for recipe-ui
   for = "/recipe-ui/browser/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
+  # Cache static assets for blog-ui
   for = "/blog-ui/browser/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
