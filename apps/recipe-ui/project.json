@@ -56,7 +56,8 @@
           "buildTarget": "recipe-ui:build:production"
         },
         "development": {
-          "buildTarget": "recipe-ui:build:development"
+          "buildTarget": "recipe-ui:build:development",
+          "hmr": true
         }
       },
       "defaultConfiguration": "development"

@@ -1,28 +1,30 @@
 {
-  "name": "blog",
+  "name": "blog-ui",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "prefix": "app",
-  "sourceRoot": "apps/blog/src",
+  "sourceRoot": "apps/blog-ui/src",
   "tags": [],
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:application",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/blog",
-        "index": "apps/blog/src/index.html",
-        "browser": "apps/blog/src/main.ts",
+        "outputPath": "dist/apps/blog-ui",
+        "index": "apps/blog-ui/src/index.html",
+        "browser": "apps/blog-ui/src/main.ts",
         "polyfills": ["zone.js"],
-        "tsConfig": "apps/blog/tsconfig.app.json",
+        "tsConfig": "apps/blog-ui/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
           {
             "glob": "**/*",
-            "input": "apps/blog/public"
+            "input": "apps/blog-ui/public"
           }
         ],
-        "styles": ["apps/blog/src/styles.scss"],
+        "styles": [
+          "apps/blog-ui/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -53,10 +55,12 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "buildTarget": "blog:build:production"
+          "buildTarget": "blog-ui:build:production"
         },
         "development": {
-          "buildTarget": "blog:build:development"
+          "buildTarget": "blog-ui:build:development",
+          "hmr": true,
+          "port": 4201
         }
       },
       "defaultConfiguration": "development"
@@ -64,7 +68,7 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "buildTarget": "blog:build"
+        "buildTarget": "blog-ui:build"
       }
     },
     "lint": {
@@ -74,15 +78,15 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/blog/jest.config.ts"
+        "jestConfig": "apps/blog-ui/jest.config.ts"
       }
     },
     "serve-static": {
       "executor": "@nx/web:file-server",
       "options": {
-        "buildTarget": "blog:build",
-        "port": 4200,
-        "staticFilePath": "dist/apps/blog/browser",
+        "buildTarget": "blog-ui:build",
+        "port": 4201,
+        "staticFilePath": "dist/apps/blog-ui/browser",
         "spa": true
       }
     }
