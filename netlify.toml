@@ -4,12 +4,12 @@
 
 [[redirects]]
   from = "/recipe/*"
-  to = "/recipe-ui/browser/index.html"
+  to = "recipe-ui/browser/index.html"
   status = 200
 
 [[redirects]]
   from = "/blog/*"
-  to = "/blog-ui/browser/index.html"
+  to = "blog-ui/browser/index.html"
   status = 200
 
 # Correct Headers Section
