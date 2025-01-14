@@ -12,6 +12,18 @@
   to = "/blog-ui/browser/index.html"
   status = 200
 
-[headers]
-[/]
-Content-Type = "application/javascript"
+# Correct Headers Section
+[[headers]]
+  for = "/**.js"
+  [headers.values]
+    Content-Type = "application/javascript"
+
+[[headers]]
+  for = "/**.css"
+  [headers.values]
+    Content-Type = "text/css"
+
+[[headers]]
+  for = "/**.html"
+  [headers.values]
+    Content-Type = "text/html"
