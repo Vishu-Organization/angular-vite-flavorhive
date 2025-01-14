@@ -15,10 +15,15 @@
   status = 200
 
 [[headers]]
-  # Set headers for JavaScript and CSS files
-  for = "/*"
+  # Set Content-Type for JavaScript files
+  for = "/*.js"
   [headers.values]
     Content-Type = "application/javascript"
+
+[[headers]]
+  # Set Content-Type for CSS files
+  for = "/*.css"
+  [headers.values]
     Content-Type = "text/css"
 
 [[headers]]
