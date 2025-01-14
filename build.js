@@ -13,7 +13,7 @@ apps.forEach((app) => {
 
   // Build each app
   console.log(`Building ${appName}...`);
-  execSync(`nx build ${appName}`, { stdio: 'inherit' });
+  execSync(`npx nx build ${appName}`, { stdio: 'inherit' });
 
   const sourcePath = path.join('dist', 'apps', appName);
   const destinationPath = path.join('dist', appName);
