@@ -11,3 +11,21 @@
   from = "/blog/*"
   to = "/blog-ui/browser/index.html"
   status = 200
+
+[headers]
+  # Add Content-Type for JavaScript files
+  [[headers.values]]
+    for = "/**.js"
+    [headers.values]
+    Content-Type = "application/javascript"
+
+  # Optionally add Content-Type for other file types
+  [[headers.values]]
+    for = "/**.css"
+    [headers.values]
+    Content-Type = "text/css"
+
+  [[headers.values]]
+    for = "/**.html"
+    [headers.values]
+    Content-Type = "text/html"
