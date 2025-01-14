@@ -7,12 +7,21 @@
   from = "/recipe/*"
   to = "/recipe-ui/browser/index.html"
   status = 200
+  force = false
 
 [[redirects]]
   # Redirect for blog app
   from = "/blog/*"
   to = "/blog-ui/browser/index.html"
   status = 200
+  force = false
+
+[[redirects]]
+  # Prevent static assets from being redirected
+  from = "/*"
+  to = "/"
+  status = 200
+  query = "!js,!css,!map,!png,!jpg,!jpeg,!gif,!svg"
 
 [[headers]]
   # Set Content-Type for JavaScript files
