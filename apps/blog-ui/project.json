@@ -11,6 +11,7 @@
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/blog-ui",
+        "baseHref": "/blog/",
         "index": "apps/blog-ui/src/index.html",
         "browser": "apps/blog-ui/src/main.ts",
         "polyfills": ["zone.js"],

@@ -11,6 +11,7 @@
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/recipe-ui",
+        "baseHref": "/recipe/",
         "index": "apps/recipe-ui/src/index.html",
         "browser": "apps/recipe-ui/src/main.ts",
         "polyfills": ["zone.js"],

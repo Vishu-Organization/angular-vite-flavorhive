@@ -2,7 +2,9 @@
   "name": "@flavor-hive/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build": "node build.js"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~19.0.0",
