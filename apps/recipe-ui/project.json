@@ -28,6 +28,7 @@
       },
       "configurations": {
         "production": {
+          "deployUrl": "./",
           "budgets": [
             {
               "type": "initial",
@@ -45,7 +46,8 @@
         "development": {
           "optimization": false,
           "extractLicenses": false,
-          "sourceMap": true
+          "sourceMap": true,
+          "deployUrl": "./"
         }
       },
       "defaultConfiguration": "production"
