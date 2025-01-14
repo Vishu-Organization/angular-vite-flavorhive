@@ -4,26 +4,10 @@
 
 [[redirects]]
   from = "/recipe/*"
-  to = "recipe-ui/browser/index.html"
+  to = "apps/recipe-ui/browser/index.html"
   status = 200
 
 [[redirects]]
   from = "/blog/*"
-  to = "blog-ui/browser/index.html"
+  to = "apps/blog-ui/browser/index.html"
   status = 200
-
-# Correct Headers Section
-[[headers]]
-  for = "/**.js"
-  [headers.values]
-    Content-Type = "application/javascript"
-
-[[headers]]
-  for = "/**.css"
-  [headers.values]
-    Content-Type = "text/css"
-
-[[headers]]
-  for = "/**.html"
-  [headers.values]
-    Content-Type = "text/html"
